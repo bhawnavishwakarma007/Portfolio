@@ -18,7 +18,7 @@
         fill="#22c55e">BV</text>
 
   <!-- right code -->
-  <text x="98" y="67"
+  <text x="78" y="67"
         font-family="JetBrains Mono, Consolas, monospace"
         font-size="34"
         fill="#e5e7eb">/&gt;</text>
