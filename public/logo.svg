@@ -1,0 +1,15 @@
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+
+  <!-- group keeps everything together -->
+  <text x="20" y="52"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="38"
+        letter-spacing="0">
+
+    <tspan fill="#e5e7eb">&lt;</tspan>
+    <tspan dx="2" fill="#22c55e" font-weight="600">BV</tspan>
+    <tspan dx="2" fill="#e5e7eb">/&gt;</tspan>
+
+  </text>
+</svg>
