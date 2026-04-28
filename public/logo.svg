@@ -1,0 +1,26 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- background circle -->
+  <circle cx="60" cy="60" r="56" fill="#0b1a33" stroke="#1f2937" stroke-width="3"/>
+
+  <!-- left bracket -->
+  <text x="12" y="67"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="34"
+        fill="#e5e7eb">&lt;</text>
+
+  <!-- initials -->
+  <text x="58" y="67"
+        text-anchor="middle"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="36"
+        font-weight="600"
+        fill="#22c55e">BV</text>
+
+  <!-- right code -->
+  <text x="78" y="67"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="34"
+        fill="#e5e7eb">/&gt;</text>
+
+</svg>

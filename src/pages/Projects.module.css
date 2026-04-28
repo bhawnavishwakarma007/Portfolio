@@ -1,0 +1,298 @@
+.section {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.inner {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* ── Grid ──────────────────────────────────────── */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Project 3 spans full width to balance odd count */
+  .grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+/* ── Card ──────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-card);
+  padding: 1.75rem;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 204, 153, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 204, 153, 0.06);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ── Card Header ──────────────────────────────── */
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cardNumber {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  padding-top: 0.2rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+@media (min-width: 768px) {
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* ── Description ──────────────────────────────── */
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ── Highlights ───────────────────────────────── */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.bullet {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+}
+
+/* ── Footer ───────────────────────────────────── */
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 520px) {
+  .cardFooter {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+/* ── Tags ─────────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 204, 153, 0.15);
+  white-space: nowrap;
+}
+
+/* ── Diagram Button ───────────────────────────── */
+.diagramBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.diagramBtn:hover {
+  background: var(--color-primary);
+  color: #0a0e17;
+}
+
+.diagramIcon {
+  font-size: 1rem;
+}
+
+/* ── Architecture Modal ───────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modalContent {
+  background: var(--color-card);
+  border: 1px solid rgba(0, 204, 153, 0.25);
+  border-radius: 0.75rem;
+  max-width: 95vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleIn 0.15s ease;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.modalTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.modalClose {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  border-radius: 0.375rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.modalClose:hover {
+  background: var(--color-primary);
+  color: #0a0e17;
+  border-color: var(--color-primary);
+}
+
+.modalImgWrap {
+  overflow: auto;
+  padding: 1.25rem;
+  flex: 1;
+}
+
+.modalImg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
