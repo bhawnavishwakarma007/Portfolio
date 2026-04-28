@@ -1,0 +1,161 @@
+.about {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+
+.container {
+  max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+.labelNum { opacity: 0.6; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.left {}
+
+.heading {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.accent { color: var(--teal); }
+
+.bio {
+  color: var(--text-2);
+  font-size: 0.925rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-2);
+  transition: color 0.2s;
+}
+.contactItem svg { color: var(--teal); flex-shrink: 0; }
+.contactItem:hover { color: var(--teal); }
+
+/* ── Right column ── */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eduCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+.eduCard:hover { border-color: var(--border-accent); }
+
+.eduTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.eduIcon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--teal-dim);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.eduMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.eduPeriod {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--teal);
+}
+.eduInst {
+  font-size: 0.8rem;
+  color: var(--text-2);
+  font-weight: 500;
+}
+.eduDegree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+  font-family: var(--font-body);
+}
+.eduPlace {
+  font-size: 0.8rem;
+  color: var(--text-2);
+  margin-bottom: 0.75rem;
+}
+.eduGpa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--teal-dim);
+  border: 1px solid var(--border-accent);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+}
+.gpaLabel { font-size: 0.7rem; color: var(--text-2); font-family: var(--font-mono); }
+.gpaVal { font-size: 0.85rem; color: var(--teal); font-weight: 700; font-family: var(--font-mono); }
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.infoItem {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.infoLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.infoVal { font-size: 0.85rem; color: var(--text); font-weight: 500; }
+.infoVal.ok { color: #4ade80; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about { padding: 4rem 0; }
+}

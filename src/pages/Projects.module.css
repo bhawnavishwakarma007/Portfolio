@@ -1,0 +1,213 @@
+.page {
+  padding: 4rem 0 6rem;
+  position: relative; z-index: 1;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+.label {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.labelNum { opacity: 0.6; }
+
+.pageHeader { margin-bottom: 3rem; }
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800; color: var(--text); margin-bottom: 0.75rem;
+}
+.sub { color: var(--text-2); font-size: 0.95rem; max-width: 480px; }
+
+/* ── Architecture banner ── */
+.archBanner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  background: rgba(0,210,180,0.04);
+  border: 1px solid rgba(0,210,180,0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+.archLeft { display: flex; flex-direction: column; gap: 0.75rem; }
+.archBadge {
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--teal-dim);
+  border: 1px solid var(--border-accent);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  width: fit-content;
+}
+.archLeft h3 {
+  font-size: 1.15rem; font-weight: 700; color: var(--text);
+  font-family: var(--font-display);
+}
+.archLeft p { font-size: 0.875rem; color: var(--text-2); line-height: 1.7; }
+.diagBtn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--teal); color: #03040a;
+  font-weight: 700; font-size: 0.8rem;
+  border-radius: 6px; border: none;
+  width: fit-content;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+.diagBtn:hover { opacity: 0.9; box-shadow: 0 4px 20px rgba(0,210,180,0.3); }
+.archThumb {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+  filter: brightness(0.9);
+}
+.archThumb:hover { opacity: 0.85; }
+
+/* ── Project list ── */
+.projectList { display: flex; flex-direction: column; gap: 1rem; }
+
+.projectCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.projectCard:hover { border-color: rgba(0,210,180,0.25); }
+.projectCard.expanded { border-color: rgba(0,210,180,0.35); }
+
+.cardHeader {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.cardLeft { display: flex; align-items: flex-start; gap: 1rem; flex: 1; }
+.projectNum {
+  font-family: var(--font-mono); font-size: 0.7rem;
+  color: var(--teal); opacity: 0.6; padding-top: 0.2rem; white-space: nowrap;
+}
+.projectTitle {
+  font-size: 1rem; font-weight: 600; color: var(--text);
+  font-family: var(--font-body); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.tagRow { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.68rem; font-family: var(--font-mono);
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text-2); letter-spacing: 0.03em;
+}
+.tagMore { font-size: 0.68rem; color: var(--text-3); padding: 0.2rem 0.4rem; }
+.toggleBtn {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem;
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+
+.cardBody {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  padding-top: 1.25rem;
+  animation: fadeIn 0.25s both;
+}
+.desc { color: var(--text-2); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.25rem; }
+
+.highlights h4 {
+  font-size: 0.75rem; font-family: var(--font-mono);
+  color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.highlights ul { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+.highlights li {
+  display: flex; align-items: flex-start; gap: 0.65rem;
+  font-size: 0.875rem; color: var(--text-2); line-height: 1.6;
+}
+.bullet {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--teal); flex-shrink: 0; margin-top: 0.55rem;
+}
+
+.allTags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+
+.archPreview {
+  margin: 1rem 0;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+.archPreview img { width: 100%; }
+
+.cardLinks { display: flex; gap: 0.75rem; }
+.linkBtn, .linkBtnAlt {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem; font-weight: 600;
+  border-radius: 6px; letter-spacing: 0.03em;
+  transition: background 0.2s;
+}
+.linkBtn {
+  background: var(--teal-dim); color: var(--teal);
+  border: 1px solid var(--border-accent);
+}
+.linkBtn:hover { background: rgba(0,210,180,0.18); }
+.linkBtnAlt {
+  background: rgba(255,255,255,0.04); color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.linkBtnAlt:hover { background: rgba(255,255,255,0.07); }
+
+/* ── Modal ── */
+.modal {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.2s both;
+}
+.modalContent {
+  background: var(--bg-2);
+  border: 1px solid rgba(0,210,180,0.25);
+  border-radius: 16px;
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.modalHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.modalHeader h3 { font-size: 1rem; font-weight: 600; color: var(--text); }
+.closeBtn {
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  color: var(--text-2); border-radius: 6px;
+  padding: 0.35rem 0.7rem; font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.closeBtn:hover { background: rgba(255,255,255,0.1); }
+.modalBody {
+  overflow: auto; padding: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.modalBody img {
+  width: 100%; border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .archBanner { grid-template-columns: 1fr; }
+  .archRight { display: none; }
+  .cardHeader { padding: 1.25rem; }
+}
