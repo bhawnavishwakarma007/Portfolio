@@ -66,7 +66,7 @@ const projects = [
       'GitHub',
       'Slack',
     ],
-    architectureDiagram: '/jenkins-argocd.png', // ✅ FIXED
+    architectureDiagram: '/Jenkins_project_drawio.png', // ✅ FIXED
     githubUrl: null,
     liveUrl: null,
   },
