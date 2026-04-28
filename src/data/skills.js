@@ -6,15 +6,22 @@ const skills = [
   {
     category: 'Cloud & DevOps',
     items: [
-      'AWS',
+      'AWS (EC2, VPC, RDS, S3, IAM, CloudWatch, CloudFront, WAF)',
+      'Azure (VM, Storage, Networking)',
+      'GCP (Compute Engine, Cloud Storage, IAM)',
       'Terraform',
       'OpenTofu',
+      'Ansible'
+    ],
+  },
+  {
+    category: 'Containerization & Orchestration',
+    items: [
       'Docker',
+      'Docker Compose',
       'Kubernetes',
-      'CloudWatch',
-      'CloudFront',
-      'Grafana',
-      'Prometheus'
+      'OpenShift',
+      'Helm'
     ],
   },
   {
@@ -24,7 +31,16 @@ const skills = [
       'GitLab CI/CD',
       'Jenkins',
       'Maven',
-      'SonarQube'
+      'SonarQube',
+      'ArgoCD (GitOps)'
+    ],
+  },
+  {
+    category: 'Monitoring & Observability',
+    items: [
+      'Prometheus',
+      'Grafana',
+      'CloudWatch'
     ],
   },
   {
@@ -51,7 +67,9 @@ const skills = [
       'GitHub',
       'GitLab',
       'Visual Studio Code',
-      'Linux'
+      'Linux',
+      'Trivy',
+      'Make'
     ],
   },
 ]
