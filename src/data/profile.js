@@ -14,7 +14,7 @@ const profile = {
     'Currently pursuing my Bachelor of Technology in Computer Science at Eklavya University, I am constantly learning and exploring new technologies in cloud computing, serverless computing, and DevOps methodologies.',
   ],
   imageUrl: '/vite.svg',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/Bhawna_Vishwakarma_Resume.pdf',
   email: 'bhawna.vishwakarma2004@gmail.com',
   phone: '+91-887154XXXX',
   location: 'Hyderabad, Telangana',
