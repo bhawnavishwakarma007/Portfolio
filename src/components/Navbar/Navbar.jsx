@@ -56,7 +56,7 @@ function Navbar() {
           ))}
         </nav>
 
-        <a href="/resume.pdf" className={styles.resumeBtn} download>
+        <a href="/Bhawna_Vishwakarma_Resume.pdf" className={styles.resumeBtn} download>
           <span>Resume</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M6 1v8M2 7l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
